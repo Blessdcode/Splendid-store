@@ -1,0 +1,88 @@
+/** @format */
+
+import {
+	sunglasses,
+	cover,
+	sunglasse,
+	tote_bag,
+	wool,
+	wool2,
+	wool3,
+	woolblend,
+	braided,
+	khaki,
+	leather_gloves,
+	khaki_tote_bag,
+	down_mittens,
+	dock_sunglasses,
+	tartan_scarf,
+	tote_bag_2,
+} from "./src/assets";
+
+export const PRODUCT = [
+	{
+		id: 1,
+		title: "Sunglass",
+		desc: "",
+		img: sunglasse,
+		img2: dock_sunglasses,
+		price: 40,
+	},
+	{
+		id: 2,
+		title: "Tote Bag",
+		desc: "",
+		img: tote_bag,
+		img2: tote_bag_2,
+		price: 20,
+	},
+	{
+		id: 3,
+		title: "Woolbend",
+		desc: "",
+		img: woolblend,
+		img2: braided,
+		price: 15,
+	},
+	{
+		id: 4,
+		title: "Wool",
+		desc: "",
+		img: wool,
+		img2: tartan_scarf,
+		price: 25,
+	},
+	{
+		id: 5,
+		title: "wool wrap",
+		desc: "",
+		img: wool2,
+		img2: wool3,
+		price: 45,
+	},
+	{
+		id: 6,
+		title: "Glass cove",
+		desc: "",
+		img: sunglasses,
+		img2: cover,
+		price: 25,
+	},
+
+	{
+		id: 8,
+		title: "khaki tote bag",
+		desc: "",
+		img: khaki,
+		img2: khaki_tote_bag,
+		price: 42,
+	},
+	{
+		id: 9,
+		title: "Leather Gloves",
+		desc: "",
+		img: leather_gloves,
+		img2: down_mittens,
+		price: 12,
+	},
+];
