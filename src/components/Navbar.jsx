@@ -5,8 +5,14 @@ import { Link } from "react-router-dom";
 import { AiFillShopping } from "react-icons/ai";
 import { Button } from "./ui/button";
 import CartList from "../pages/CartList";
+import { useCartStore } from "../store/cart-store";
 
 export function Navbar() {
+	const cart = useCartStore((state) => state.cart);
+	const getTotalCart = () => {
+		return cart.reduce((total, item) => total + item.quantity, 0);
+	};
+
 	const [showCart, setShowCart] = useState(false);
 	return (
 		<header className="w-full bg-slate-900 shadow rounded">
@@ -29,9 +35,9 @@ export function Navbar() {
 							<AiFillShopping className="h-5 w-5" />
 
 							<span className="ml-2 text-sm font-bold">
-								0
-							</span>
-							<span className="sr-only ">Cart</span>
+								{getTotalCart()}
+							</span>cl
+							<span className=" ml-1">Cart</span>
 						</Button>
 					</div>
 					{/* <ThemeToggle /> */}

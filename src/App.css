@@ -86,3 +86,14 @@
 	z-index: 33;
 	transition:  .5s ease;
 }
+
+.scroll{
+	overflow-y: scroll;
+	scrollbar-width: 0;
+	scrollbar-gutter: 0;
+	scrollbar-width: 0px;
+}
+
+/* ::-webkit-scrollbar{
+	width: 0;
+} */
