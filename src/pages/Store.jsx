@@ -14,7 +14,10 @@ const Store = (props) => {
 
 	const handleAddToCart = () => {
 		addToCart({ id, title, img, desc, price, quantity: 1 });
-		setMessage(message);
+		setMessage(`${title} has been added to cart!!`);
+		setTimeout(() => {
+			setMessage("");
+		}, 3000);
 	};
 
 	return (
@@ -53,9 +56,19 @@ const Store = (props) => {
 					</div>
 				</div>
 			</div>
-			{addToCart && (
-				<div className=" absolute top-0">{message}</div>
-			)}
+			{/* {addToCart && (
+				<div className="absolute bottom-10 right-0 bg-white w-[fit-content]  flex items-center gap-4 shadow-lg rounded-xl ">
+					<div className=" ">{message}</div>
+				</div>
+			)} */}
+
+			{addToCart && 
+				<div className="absolute bottom-10 right-0 bg-white w-[fit-content] h-[40px] mr-3  flex items-center justify-center gap-4 shadow-lg rounded-xl z-10">
+				
+					<span className="text-gray-800">{message}</span>
+					
+				</div>
+			}
 		</>
 	);
 };

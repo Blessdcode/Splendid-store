@@ -36,7 +36,7 @@ export function Navbar() {
 
 							<span className="ml-2 text-sm font-bold">
 								{getTotalCart()}
-							</span>cl
+							</span>
 							<span className=" ml-1">Cart</span>
 						</Button>
 					</div>

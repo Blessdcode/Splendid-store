@@ -77,23 +77,41 @@
 	}
 } */
 
-
-.transform{
+.transform {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%, -50%);
 	z-index: 33;
-	transition:  .5s ease;
+	transition: 0.5s ease;
 }
 
-.scroll{
-	overflow-y: scroll;
-	scrollbar-width: 0;
-	scrollbar-gutter: 0;
-	scrollbar-width: 0px;
-}
-
-/* ::-webkit-scrollbar{
-	width: 0;
+/* .scroll {
+    overflow-y: scroll;
+    scrollbar-width: 40px;
+    scrollbar-gutter: 0;
+    scrollbar-width: 0px;
+    margin-right: -10px; 
 } */
+.scroll {
+    overflow-y: scroll;
+    scrollbar-width: 40px; /* For Firefox */
+    scrollbar-color: var(--thumb-color) var(--track-color); /* For Firefox */
+    margin-right: -10px; /* Adjust as needed */
+
+    /* For WebKit browsers (Chrome, Safari) */
+    &::-webkit-scrollbar {
+        width: 40px;
+    }
+
+    /* For WebKit browsers (Chrome, Safari) - Track */
+    &::-webkit-scrollbar-track {
+        background: var(--track-color);
+    }
+
+    /* For WebKit browsers (Chrome, Safari) - Thumb */
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--thumb-color);
+        border-radius: 20px; /* Adjust as needed */
+    }
+}

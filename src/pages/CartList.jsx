@@ -18,7 +18,7 @@ const CartList = () => {
 	};
 
 	return (
-		<div className="w-[300px] h-[400px] bg-slate-900 absolute z-30 top-8 -left-5 text-slate-200 shadow-2xl rounded-xl p-3 scroll">
+		<div className="w-[350px] h-[400px] bg-slate-900 absolute z-30 top-8 -left-8 text-slate-200 shadow-2xl rounded-xl p-3 scroll">
 			{cart.length === 0 ? (
 				<h1>Your cart is empty!</h1>
 			) : (
